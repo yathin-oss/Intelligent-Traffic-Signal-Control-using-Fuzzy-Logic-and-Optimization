@@ -1,0 +1,298 @@
+{
+  "generated_utc": "2026-10-01T06:00:50+00:00",
+  "python": "3.14.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "eval_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129
+  ],
+  "tuning_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "tuned": {
+    "actuated_gap": 2.0,
+    "w_fuzzy": 1.0
+  },
+  "config": {
+    "timing": {
+      "g_min": 10,
+      "g_max": 60,
+      "yellow": 3,
+      "all_red": 2,
+      "c_max": 120
+    },
+    "traffic": {
+      "saturation_flow": 0.5,
+      "startup_lost": 2
+    },
+    "sim": {
+      "warmup": 600,
+      "measure": 3600,
+      "cooldown": 900,
+      "ewma_tau": 120.0
+    },
+    "fuzzy": {
+      "queue_universe": [
+        0.0,
+        40.0
+      ],
+      "queue_terms": {
+        "SHORT": [
+          0.0,
+          0.0,
+          3.0,
+          8.0
+        ],
+        "MEDIUM": [
+          5.0,
+          12.0,
+          12.0,
+          20.0
+        ],
+        "LONG": [
+          15.0,
+          25.0,
+          40.0,
+          40.0
+        ]
+      },
+      "intensity_universe": [
+        0.0,
+        1.0
+      ],
+      "intensity_terms": {
+        "LOW": [
+          0.0,
+          0.0,
+          0.08,
+          0.18
+        ],
+        "MEDIUM": [
+          0.1,
+          0.25,
+          0.25,
+          0.4
+        ],
+        "HIGH": [
+          0.32,
+          0.45,
+          1.0,
+          1.0
+        ]
+      },
+      "green_universe": [
+        10.0,
+        60.0
+      ],
+      "green_terms": {
+        "VERY_SHORT": [
+          10.0,
+          10.0,
+          12.0,
+          20.0
+        ],
+        "SHORT": [
+          12.0,
+          20.0,
+          20.0,
+          30.0
+        ],
+        "MEDIUM": [
+          22.0,
+          32.0,
+          32.0,
+          42.0
+        ],
+        "LONG": [
+          34.0,
+          44.0,
+          44.0,
+          54.0
+        ],
+        "VERY_LONG": [
+          46.0,
+          56.0,
+          60.0,
+          60.0
+        ]
+      },
+      "resolution": 501
+    },
+    "optimizer": {
+      "horizon": 120,
+      "rho": 30.0,
+      "w_queue": 20.0,
+      "w_fuzzy": 1.0
+    }
+  },
+  "scenarios": {
+    "low": {
+      "name": "low",
+      "base": [
+        200,
+        200,
+        200,
+        200
+      ],
+      "peak": null,
+      "peak_time": 2400.0,
+      "peak_width": 600.0
+    },
+    "balanced": {
+      "name": "balanced",
+      "base": [
+        450,
+        450,
+        450,
+        450
+      ],
+      "peak": null,
+      "peak_time": 2400.0,
+      "peak_width": 600.0
+    },
+    "heavy": {
+      "name": "heavy",
+      "base": [
+        650,
+        650,
+        650,
+        650
+      ],
+      "peak": null,
+      "peak_time": 2400.0,
+      "peak_width": 600.0
+    },
+    "imbalanced": {
+      "name": "imbalanced",
+      "base": [
+        700,
+        700,
+        200,
+        200
+      ],
+      "peak": null,
+      "peak_time": 2400.0,
+      "peak_width": 600.0
+    },
+    "peak": {
+      "name": "peak",
+      "base": [
+        250,
+        250,
+        250,
+        250
+      ],
+      "peak": [
+        750,
+        750,
+        500,
+        500
+      ],
+      "peak_time": 2400.0,
+      "peak_width": 600.0
+    }
+  },
+  "tuning_scenario": {
+    "name": "tuning",
+    "base": [
+      400,
+      350,
+      350,
+      300
+    ],
+    "peak": [
+      650,
+      600,
+      450,
+      400
+    ],
+    "peak_time": 2000.0,
+    "peak_width": 900.0
+  },
+  "noise_levels": {
+    "none": {
+      "queue_sigma": 0.0,
+      "miss_rate": 0.0
+    },
+    "moderate": {
+      "queue_sigma": 2.0,
+      "miss_rate": 0.1
+    },
+    "severe": {
+      "queue_sigma": 4.0,
+      "miss_rate": 0.2
+    }
+  },
+  "seeds_used": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129
+  ],
+  "quick": false,
+  "runtime_s": 69.7
+}

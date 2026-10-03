@@ -1,0 +1,9 @@
+[project]
+name = "traffic-signal-fuzzy-opt"
+version = "1.0.0"
+description = "Intelligent traffic signal control using fuzzy logic and optimization (simulation study)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
